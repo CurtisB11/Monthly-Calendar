@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media print {
+	* {
+		-webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+		color-adjust: exact !important;                 /* Firefox 48 – 96 */
+		print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+	}
+	
+	#spaceForNavigation {
+		visibility:hidden;
+	}
+
+	.pageContentsHolder {
+		-webkit-print-color-adjust: exact; /* This prints all the background and calendar colours in Chrome. */
+	}
+	
+	#calendarInnerTitleDivTag { /* controls for title holder div. */
+		top: 25px;
+	}
+	
+	#spaceForCalendar {
+		height: 680px;
+	}
+	
+	table {
+		top: 10px;
+	}
+	
+	.birthdayOccasion {
+		background-color: white;
+	}
+	
+	.occasion {
+		background-color: white;
+	}
+	
+	.dateHoliday {
+		background-color: white;
+	}
+	
+	.wordTodayInCalendarMemo {
+		visibility:hidden;
+	}
+	
+	.todayNumber, .todayNumberWithMoonPhase {
+		color: black;
+		font-weight: normal;
+		font-size: 16px;
+	}
+	
+	.todaysDate {
+		background-color: white;
+	}
+	
+	.daysOfTheWeekend {
+		background-color: #f5ffff;
+	}
+	
+	.cellBackgroundForNewMoon, .cellBackgroundForBirthdayNewMoon, .cellBackgroundForOccasionNewMoon, .cellBackgroundForTodayNewMoon {
+		background-image: url("../../../images/calendarMonthly/calendarNewMoonPrintBackground.png");
+	}
+	
+	.cellBackgroundForFirstQuarter, .cellBackgroundForBirthdayFirstQuarter, .cellBackgroundForOccasionFirstQuarter, .cellBackgroundForTodayFirstQuarter {
+		background-image: url("../../../images/calendarMonthly/calendarFirstQuarterPrintBackground.png");
+	}
+	
+	.cellBackgroundForFullMoon, .cellBackgroundForBirthdayFullMoon, .cellBackgroundForOccasionFullMoon, .cellBackgroundForTodayFullMoon {
+		background-image: url("../../../images/calendarMonthly/calendarFullMoonPrintBackground.png");
+	}
+	
+	.cellBackgroundForLastQuarter, .cellBackgroundForBirthdayLastQuarter, .cellBackgroundForOccasionLastQuarter, .cellBackgroundForTodayLastQuarter {
+		background-image: url("../../../images/calendarMonthly/calendarLastQuarterPrintBackground.png");
+	}
+	
+	.daysOfTheWeekend.cellBackgroundForNewMoon, .daysOfTheWeekend.cellBackgroundForBirthdayNewMoon, .daysOfTheWeekend.cellBackgroundForOccasionNewMoon, .daysOfTheWeekend.cellBackgroundForTodayNewMoon {
+		background-image: url("../../../images/calendarMonthly/calendarNewMoonWeekendBackground.png");
+	}
+	
+	.daysOfTheWeekend.cellBackgroundForFirstQuarter, .daysOfTheWeekend.cellBackgroundForBirthdayFirstQuarter, .daysOfTheWeekend.cellBackgroundForOccasionFirstQuarter, .daysOfTheWeekend.cellBackgroundForTodayFirstQuarter {
+		background-image: url("../../../images/calendarMonthly/calendarFirstQuarterWeekendBackground.png");
+	}
+	
+	.daysOfTheWeekend.cellBackgroundForFullMoon, .daysOfTheWeekend.cellBackgroundForBirthdayFullMoon, .daysOfTheWeekend.cellBackgroundForOccasionFullMoon, .daysOfTheWeekend.cellBackgroundForTodayFullMoon {
+		background-image: url("../../../images/calendarMonthly/calendarFullMoonWeekendBackground.png");
+	}
+	
+	.daysOfTheWeekend.cellBackgroundForLastQuarter, .daysOfTheWeekend.daysOfTheWeekend.cellBackgroundForBirthdayLastQuarter, .daysOfTheWeekend.cellBackgroundForOccasionLastQuarter, .daysOfTheWeekend.cellBackgroundForTodayLastQuarter {
+		background-image: url("../../../images/calendarMonthly/calendarLastQuarterWeekendBackground.png");
+	}
+}
+
+@media print :first {
+	@page {
+		size: letter landscape;
+	}
+}
+

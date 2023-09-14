@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* Curtis' Monthly Calendar, Main Table and Page Styles */
+
+table {
+	position: relative;
+	top: 80px;
+	margin-right: auto;
+	margin-left: auto;
+	font-family:Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	border: 4px solid #bbbbbb;
+}
+
+#calendarInnerTitleDivTag { /* controls for title holder div. */
+	position:relative;
+	top: 45px;	/* This line sets height of title text from top of div. */	
+	width: 990px;
+	font-size: 20px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+#spaceForCalendar {			/* the spaceForCalendar div sits in the html document. It places the calendar output from javascript.	*/
+	position:relative;
+/*	top: 80px; */
+	height: 790px;
+/*	width: 865px; */
+	width: 990px;
+	margin-right: auto;
+	margin-left: auto;
+/*	display: block; */
+/*	float: right; */
+}
+
+.calendar th {
+	border-left: 1px solid #d3d3d3;
+	border-right: 1px solid #d3d3d3;
+
+}
+
+.calendar td {
+	width: 120px;
+	height: 83px;
+	border: 1px solid #cccccc;
+	vertical-align: top;
+	text-align: right;
+}
+
+.monthNameYearHeaderCell {
+	height: 90px;
+	background-color: #435f5a;
+	text-align: left;
+	vertical-align: bottom;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	font-size: 26px;
+}
+
+.weekdayCells {			/* weekday name cells */
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	background-color: #75aca5;
+	font-size: 11pt;
+	border-top: 4px solid #bbbbbb;
+	border-bottom: 4px solid #bbbbbb;
+}
+
+.weekendCells {				/* cell controls for weekend day name cells */
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	background-color: #87c6be;
+	font-size: 11pt;
+	border-top: 4px solid #bbbbbb;
+	border-bottom: 4px solid #bbbbbb;
+}
+
+.daysOfWeekNumber {
+/*	color: #000000; */
+	position: relative;
+	left: 50px;
+	margin-top: 5px;
+	font-size: 16px;
+	width: 60px;
+}
+
+.weekendNumber {
+	position: relative;
+	left: 50px;
+	width: 60px;
+	color: #808080;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.todayNumber {
+	position: relative;
+	top: 3px;
+	left: 13px;
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	width: 97px;
+}
+
+.todayNumberWithMoonPhase {
+	position: relative;
+	top: 3px;
+	left: 44px;
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	width: 66px;
+}
+
+.todayNumberWithMoonPhaseOnHoliday {
+	position: relative;
+	top: 3px;
+	left: 44px;
+	color: magenta;
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	width: 66px;
+}
+
+.dateHolidayNumber {
+	position: relative;
+	left: 50px;
+	width: 60px;
+	color: magenta;
+	margin-top: 3px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.otherMonthsDateNumber {
+	color: #999999;
+	margin-right: 10px;
+	margin-top: 5px;
+	height: 16px;
+}
+
+.daysOfTheWeek {
+	background-color: #ffffff;
+	color: #000000;
+	text-align: right;
+}
+
+.daysOfTheWeekend {
+	background-color: #f5ffff;
+	color: #000000;
+	text-align: right;
+}
+
+.blank { /* cell control for empty cells at beginning and end of month */
+	background-color: #e0e0e0;
+	border: 1px solid #bbbbbb;
+}
+
+.eventMoonPhase:hover, .eventMoonPhase:hover > .weekendNumber {
+/*	background-color: #0083ff; */
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.birthdayOccasion {
+	background-color: #e8e1c6;
+}
+
+.birthdayOccasion:hover, .birthdayOccasion:hover > .weekendNumber {
+	background: #e8b800;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.occasion {
+	background-color: #b3ddd8;
+	color: black;
+}
+
+.occasion:hover, .occasion:hover > .weekendNumber {
+	background: #435f5a;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.dateHoliday {
+	background-color: #b3ddd8;
+}
+
+.dateHoliday > .dateInfoHolder > .calendarMoonPhase {
+	font-weight: normal;
+	color: black;
+}
+
+.dateHoliday > .dateInfoHolder > .oneOccasion { /* Added style here for days when a birthday, or occasion, etc falls on a holiday to prevent their text from becoming magenta in the table blocks. Modal not affected. Added 2nd of November 2021. */
+	font-weight: normal;
+	color: black;
+}
+
+.dateHoliday > .dateInfoHolder > .twoOccasion { /* Added style here for days when a birthday, or occasion, etc falls on a holiday to prevent their text from becoming magenta in the table blocks. Modal not affected. Added 2nd of November 2021. */
+	font-weight: normal;
+	color: black;
+}
+
+.dateHoliday:hover, .dateHoliday:hover > .dateInfoHolder > .oneOccasionHoliday, .dateHoliday:hover > .dateInfoHolder > .twoOccasionHoliday, .dateHoliday:hover > .dateHolidayNumber {
+	background: #435f5a;
+	color: #ffd0e8;
+	cursor: pointer;
+}
+
+ /* Style below targets text in calendar blocks. It selectively targets memo text in holiday blocks when holiday block is hovered over to turn it white, and bold, etc. */
+.dateHoliday:hover > .dateInfoHolder > .oneOccasion, .dateHoliday:hover > .dateInfoHolder > .twoOccasion, .dateHoliday:hover > .dateInfoHolder > .calendarMoonPhase {
+	font-weight: bold;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+ .dateTodayHoliday {
+	 background-color: pink;
+ }
+
+.todaysDate {
+	background-color: pink;
+}
+
+.todaysDate:hover, .todaysDate:hover > .todayNumber, .todaysDate:hover .wordTodayInCalendarMemo,
+.todaysDate:hover > .todayNumberWithMoonPhase, .todaysDate:hover .wordTodayInCalendarMemo {
+	background: maroon;
+	color: white;
+	cursor: pointer;
+}
+
+#leapYearInMonthHeaderCell { /* To right justify leap year text */
+	position: relative;
+	font-size: 16px;
+	float: right;
+	bottom: -9px;
+	padding-right: 20px;
+}
+/*
+#leapYearInMonthHeaderCell { *//* To left justify leap year text *//*
+	font-size: 16px;
+	padding-left: 20px;
+}
+*/
+
+
+
+
+
+
+

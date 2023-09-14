@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* Curtis' Monthly Calendar, Navigation Bar Styles */
+
+
+input {
+	height:30px;
+	vertical-align: middle;
+	margin-right: 7px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Target Safari and Chrome */
+	input {
+		-webkit-appearance: button;
+		height: 25px;
+		line-height:14px;
+	}
+}
+/*
+@media not all and (min-resolution:.001dpcm) { @media { *//* Target Safari only. This adjusts height of html buttons for Safari */
+ /*   .forChromeOnMac { 
+        -webkit-appearance: button;
+		height: 25px;
+		line-height:14px;
+    }
+}}
+*//*
+#buttonsHolder {		*//* controls for buttons holder div which is nested inside showCal below */
+/*	height: 43px;		*//* increase height here to rise buttons from calendar by pushing calendar downward. */
+/*	width: 865px;		*//* remove */
+/*	text-align: center;
+}
+*/
+#spaceForNavigation {
+	position: relative;
+	top: 75px;
+	height: 43px;
+	width: 865px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+/*	float: right; */
+	z-index: 10;
+}
+
+#printButton {
+	margin-right: 40px;
+}
+
+#advanceOneYear {
+	margin-right: 40px;
+}
+
+#yearTextBox {
+	height: 22px;
+	width:33px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Target Safari and Chrome */
+	#yearTextBox {
+		position: relative;
+		top: -1px;
+		-webkit-appearance: none;
+		height: 18px;
+	}
+}
+
+@-moz-document url-prefix() { /* Target Firefox Only */
+	#yearTextBox {
+		height: 22px;
+		line-height: 22px;
+	}
+}
+ 
+select {
+	height: 30px;
+	line-height: 27px;
+	*padding: 3px;		/* the asterisk will make style target IE 7 only */
+	vertical-align: middle;
+	margin-right: 7px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Target Safari and Chrome to increase height of month selector box */
+	select { 
+		-webkit-appearance: menulist-button !important;
+		height: 25px;
+	} 
+}
+
+@-moz-document url-prefix() {	/* Target Firefox only, vertically center text in drop list */
+	select {
+		height: 28px;
+		padding-top:4px;
+		padding-bottom:4px; 
+	}
+}
+

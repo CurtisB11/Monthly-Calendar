@@ -1,0 +1,350 @@
+	@charset "utf-8";
+	/* Curtis' Website Main Style Sheet */
+
+	html {
+		overflow: auto;
+		overflow-y: scroll;
+		scrollbar-arrow-color: #ffffff;
+		scrollbar-3dlight-color: #69948c;
+		scrollbar-darkshadow-color: #000000;
+		scrollbar-face-color: #394f4b;
+		scrollbar-highlight-color: #9dc2be;
+		scrollbar-shadow-color: #435f5a;
+		scrollbar-track-color: #223230; 
+	}
+
+	body {
+		margin: 0px;
+		background-color: #000000;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		color: #ffffff;
+	}
+
+	table {
+		border: none;
+		border-collapse: collapse; /* 'cellspacing' equivalent */
+	}
+
+	table td, table th {
+		padding: 0px; /* 'cellpadding' equivalent */
+		margin: 0px;
+	}
+
+	a.navigation { font-size: 11px; }
+	a.navigation:link { color: #b3ddd8; text-decoration: none; }
+	a.navigation:visited { color: #69948c; text-decoration: none; }
+	a.navigation:hover { color: #ffffff; text-decoration: underline; }
+	a.navigation:active { color: #394f4b; text-decoration: underline; }
+
+
+	a.borderit img { border: none; }
+	a.borderit:hover img { border: 1px solid white; }
+	a.borderit:hover { color: red; /* irrelevant definition to overcome IE bug */ }
+
+	a.external:link { color: #b3ddd8; text-decoration: none; }
+	a.external:visited { color: #69948c; text-decoration: none; }
+	a.external:hover { color: #ffffff; text-decoration: underline; }
+	a.external:active { color: #394f4b; text-decoration: underline; }
+	a.external { font-family: Arial; font-weight: bold; font-size: 13px; }
+	
+	span.forBlankEntries { font-family: Arial; font-weight: bold; font-size: 13px; color: black; }
+	
+	a.resizableClocks:link { color: #ffffff; text-decoration: none; }
+	a.resizableClocks:visited { color: #ffffff; text-decoration: none; }
+	a.resizableClocks:hover { color: #ffffff; text-decoration: none; }
+	a.resizableClocks:active { color: #ffffff; text-decoration: none; }
+
+	#page {			/* This transparent outer wrapper covers entire screen and is necessary for height:100% style to work on #topToBottomOuterWrapper */
+		position:absolute;
+		height:100%;
+		width: 100%;
+	}
+
+	#topToBottomOuterWrapper {	/* Shows up as gray continuation element below pages that are shorter than screen height. */
+		position: relative;
+		top: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 990px;		/* First of two settings that control width of centered webpage document */
+		height: 100%;
+		background-color: #222222;
+	}
+
+	.pageContentsHolder {
+		position: relative;
+		top: 0px;
+		background-color:#223230;
+	}
+
+	#homePageContentsHolder {
+		height: 670px;
+		overflow: hidden;
+	}
+
+	#websitesNewfoundlandPageContentsHolder {
+		height: 920px;
+		overflow: hidden;
+	}
+
+	.topOfPageBannerImageSettings {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 750px;
+		height: 100px;
+		background-repeat: no-repeat;
+		background-position: left fixed;
+	}
+
+	#topOfHomePageBannerImage {
+		background-image: url("../indexFiles/indexbannerbackground.jpg");
+	}
+	
+	#topOfGuestBookBannerImage {
+		background-image: url("../images/guestbookbannerbg.jpg");
+	}
+
+	#topOfNewfoundlandWebsitesPageBannerImage {
+		background-image: url("../webNLfiles/websitestopbannerbackground.jpg");
+	}
+
+	#topOfPageBannerGraphic {
+		position: absolute;
+		top: 0;
+		left: 750px;
+		width: 240px;			/* Second of two controls that need to be changed when changing width of centered web document */
+		height: 100px;
+		background: url("../images/topbannerstrip.jpg") repeat-x right;
+	}
+
+	#pageLabels {
+		position: absolute;
+		top: 0px;
+		right: 0px; 
+		height: 50px;
+		float: right;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#pagenumber {
+		position: relative;
+		top: 5px;
+		font-size: 13px;
+	}
+
+	#locationtopic {
+		position: relative;
+		top: 62px;
+		font-size: 17px;
+	}
+
+	#navigationButtonsContainer {
+		position: absolute;
+		top: 140px;
+		left: 0px;
+		width: 165px;
+		height: 222px;
+		background: url("../images/leftsidebuttonbg.gif") no-repeat;
+		z-index: 2; /* fixes layering issues with solar position and solar data calculators. their main container div covers buttons causing them not to work in Chrome and Firefox.  */
+	}
+
+	.rolloverButtons {
+		border: none;
+	}
+
+	#buttonHome {
+		position: relative;
+		top: 14px;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#buttonMiscellaneous {
+		position: relative;
+		top: 14px;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#buttonAvalon {
+		position: relative;
+		top: 14px;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#buttonSouthwest {
+		position: relative;
+		top: 14px;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#buttonNLweb {
+		position: relative;
+		top: 14px;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#titleTime {
+		position: absolute;
+		top: 370px;
+		padding-left: 30px;
+	}
+
+	.titleCalculators {
+		font-size: 13px;
+		padding-bottom: 5px;
+	}
+
+	#titleConverters {
+		padding-top: 40px;
+	}
+
+	#linksToDownloadsContainer {
+		position: absolute;
+		top: 400px;
+		width: 165px;
+		text-align: center;
+	}
+
+	#linksToDownloadsContainerPageBottom {
+		position: absolute;
+		bottom: 30px;
+		width: 165px;
+		text-align: center;
+	}
+
+	#linksToDownloadsContainerNearPageBottom {
+		position: absolute;
+		bottom: 250px;
+		width: 165px;
+		text-align: center;
+	}
+
+	.downloadsLinks {
+		line-height: 6px;
+	}
+
+	#countersContainer {
+		position: absolute;
+		top: 550px;
+		left: 12px;
+		width:128px;
+		padding:2px;
+		border:2px solid #FFFFFF;
+		background-color:#435F5A;
+		font:normal normal bold 11px verdana;
+		text-decoration:none;
+	}
+
+	#indexpagesubheader {
+		position:absolute;
+		width:568px;
+		height:50px;
+		z-index:3;
+		left: 195px;
+		top: 158px;
+		font-size: 16px;
+		text-align: left;
+	}
+
+/* Section below deals with main website homepage */
+
+	#guestbookButtonsContainer {
+		position: absolute;
+		top: 420px;
+		left: 0px;
+		width: 165px;
+	}
+
+	#buttonSignGuestbook {
+		position: relative;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#buttonViewGuestbook {
+		position: relative;
+		left: 12px;
+		width: 134px;
+		height: 36px;
+	}
+
+	#myPictureWrapper {
+		position: relative;
+		width: 825px;
+		height: 500px;
+		float: right;
+		padding-top: 20px;
+	}
+
+/* End of main website homepage section */
+
+/* Section below deals with Newfoundland Links page */
+
+	#linksTable {
+		position: absolute;
+		top: 280px;
+		left: 240px;
+		width: 665px;
+		height: 521px;
+		background: url("../webNLfiles/nfldmapbackground.gif") no-repeat;
+	}
+
+	.topCells {
+		vertical-align: top;
+		text-align: center;
+		height:35px;
+	}
+
+	.tableCellLeft {
+		width: 230px;
+		height: 27px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.tableCellMiddle {
+		width: 205px;
+		height: 27px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.tableCellRight {
+		width: 230px;
+		height: 27px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	span.emDashAndLargeCapitalLetter {
+		font: 17px arial;
+	}
+
+	span.smallCapsText {
+		font: 12px arial;
+	}
+
+/* End of Newfoundland Links page section */
+
+
+	#footerNote {
+		position: absolute;
+		width: 100%;
+	    bottom: 0px;
+		text-align: center;
+	}
+
+	#bottomnote {
+		font-size: 9px;
+	}

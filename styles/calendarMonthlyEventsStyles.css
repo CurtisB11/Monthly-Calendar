@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* Curtis' Monthly Calendar, Events Styles */
+
+
+a.season { display: inline; font-size: 11px; }
+a.season:link { color: #0080C0; text-decoration: none; }
+a.season:hover { color: #000000; text-decoration: underline; }
+a.season:active { color: #394f4b; text-decoration: underline; }
+a.season:visited { color: #800080; text-decoration: none; }
+
+.blank a.season { display: inline; font-size: 11px; }
+.blank a.season:link { color: #999999; text-decoration: none; }
+.blank a.season:hover { color: #000000; text-decoration: underline; }
+.blank a.season:active { color: #999999; text-decoration: underline; }
+.blank a.season:visited { color: #999999; text-decoration: none; }
+
+.dateInfoHolder {
+	position: relative;
+	height: 55px;
+	width: 105px;
+	left: 8px;
+	bottom: 0;
+	font-size: 11px;
+	vertical-align: bottom;
+	display: table-cell;
+}
+
+ .dateHoliday .dateInfoHolder {
+	 bottom: 1px;
+ }
+
+.oneOccasion {
+/*	position: relative; */
+/*	height: 15px; */
+	text-align: right;
+	padding-top: 3px;
+	font-weight: normal; /*  Added font-weight here for days when a birthday, etc falls on a holiday to prevent their text from becoming bolded in the table blocks. Modal not affected. Added 18th of October 2021. */
+/*	font-size: 11px; */
+}
+
+.blank .oneOccasion {
+	color: #999999;
+}
+
+
+
+ .dateHoliday, .oneOccasionHoliday {
+	text-align: right;
+	margin-top: 3px;
+	color: magenta;
+	font-weight: bold;
+/*	padding-bottom: 1px; */
+}
+
+.blank .oneOccasionHoliday {
+	color: #999999;
+}
+
+.twoOccasion {
+/*	position: relative; */
+	text-align: right;
+	font-weight: normal; /*  Added font-weight here for days when a birthday, etc falls on a holiday to prevent their text from becoming bolded in the table blocks. Modal not affected. Added 18th of October 2021. */
+/*	line-height: 15px; */
+/*	bottom: 3px; */
+/*	height: 12px;
+	bottom: -1px; */
+/*	margin-bottom: 3px; */
+}
+
+.blank .twoOccasion {
+	color: #999999;
+}
+
+.dateHoliday .twoOccasionHoliday {
+	text-align: right;
+	color: magenta;
+	font-weight: bold;
+/*	padding-bottom: 1px; */
+}
+
+.dateTodayHoliday .twoOccasionHoliday, .dateTodayHoliday .todayNumber {
+	text-align: right;
+	color: magenta;
+	font-weight: bold;
+/*	padding-bottom: 1px; */
+}
+
+/* New classes added to style for date number today holiday with moon phase and one occasion holiday description text */
+.dateTodayHoliday:hover .oneOccasionHoliday, .dateTodayHoliday:hover .twoOccasionHoliday, .dateTodayHoliday:hover .todayNumber, .dateTodayHoliday:hover .todayNumberWithMoonPhaseOnHoliday {
+	color: #ffd0e8;
+}
+
+.blank .twoOccasionHoliday {
+	color: #999999;
+}
+
+.wordTodayInCalendarMemo {
+	position: relative;
+	right: 2px;
+/*	height: 18px; */
+	width: 45px;
+/*	top: 0px; */
+	bottom: 20px;
+	text-align: left;
+/*	margin-left: 4px; */
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.wordTodayOtherMonthsInCalendarMemo {
+	position: relative;
+/*	height: 18px; */
+	width: 45px;
+/*	top: 0px; */
+	bottom: 20px;
+	text-align: left;
+	margin-left: 12px;
+	color: #999999;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.otherMonthsTodayDateNumber {
+	position: relative;
+	top: -3px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.wordTodayMoonPhaseOtherMonthsInCalendar { /* Style added 30th of August 2021 to move word Today left on other months when today has a moon phase background */
+	position: relative;
+	width: 45px;
+	bottom: 20px;
+	text-align: left;
+	margin-left: 41px;
+	color: #999999;
+	font-size: 14px;
+}
+/*
+.todayOccasion {
+	position: relative;
+*//*	height: 18px; */
+/*	width: 45px;
+	bottom: 57px;
+	text-align: left;
+	margin-left: 4px;
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+*/
+.todayOccasionWithOneEvent {
+	bottom: 43px;
+}
+
+.calendarMoonPhase {
+	text-align: left;
+	padding-top: 3px;
+}
+
+.blank .calendarMoonPhase {
+	color: #999999;
+}
+/*
+#anniversaryYearCount {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#anniversarySup{		*//* This style controls superscripted text on anniversary occasion number */
+/*	font-size: 9pt;
+}
+
+@-moz-document url-prefix() {
+	#anniversarySup {		*//* This style controls superscripted text on anniversary occasion number for Firefox only */
+/*		font-size: 7.5pt;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #anniversarySup { 		*//* This style controls superscripted text on anniversary occasion number for Chrome only */
+/*		font-size: 7.5pt;
+    } 
+}
+*/
+
+
+
+
+
